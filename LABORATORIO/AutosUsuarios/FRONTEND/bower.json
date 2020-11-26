@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "description": "parcial",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap ":"latest",
+    "jquery":"latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

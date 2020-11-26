@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- titulo -->
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./FRONTEND/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="./FRONTEND/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./FRONTEND/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- estilos -->
+    <link rel="stylesheet" href="./FRONTEND/css/estilos.css" />
+    <!-- ref JS -->
+    <script src="FRONTEND/login.js"></script>
+    <script src="FRONTEND/registro.js"></script>
+</head>
+
+<body class="registro">
+
+    <div class="container">
+        <h1 class="titleReg">Registro</h1>
+        <div class="container" style="background-color: whitesmoke;">
+
+
+            <form class="px-4 py-3" class=" well form-horizontal " id="registroForm " method="POST " enctype="multipart/form-data ">
+
+
+                <!-- Correo -->
+                <div class="form-group ">
+                    <div class="input-group col-md-12">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" id="correo" placeholder="Correo">
+                    </div>
+                </div>
+
+                <!-- Clave -->
+                <div class="form-group ">
+                    <div class="input-group col-md-12">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <span class="fas fa-key"></span>
+                            </div>
+                        </div>
+                        <input type="password" class="form-control" id="clave" placeholder="Clave">
+                    </div>
+                </div>
+
+
+                <!-- Nombre -->
+                <div class="form-group ">
+                    <div class="input-group col-md-12">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                        <div class="valid-feedback">bien</div>
+                        <div class="invalid-feedback">VACIO</div>
+                    </div>
+                </div>
+
+
+                <!-- Apellido -->
+                <div class="form-group ">
+                    <div class="input-group col-md-12">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                    </div>
+                </div>
+
+
+                <!-- Perfil -->
+                <div class="form-group ">
+                    <div class="input-group col-md-12">
+                        <div class="input-group-text">
+                            <span class="fas fa-id-card"></span>
+                        </div>
+                        <select class="custom-select" id="perfil">
+                                  <option selected disabled value="">Seleccionar perfil</option>
+                                  <option>Empleado</option>
+                                  <option>Encargado</option>
+                                  <option>Propietario</option>
+                                </select>
+                    </div>
+                </div>
+
+                <!-- Foto -->
+                <div class="form-group ">
+                    <div class="input-group col-md-12">
+                        <div class="custom-file mb-3">
+                            <input type="file" class="custom-file-input" id="foto" required>
+                            <label class="custom-file-label" for="foto">  <span class="fas fa-camera"></span></label>
+                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group " align="center ">
+                        <label class="control-label col-md-1 "></label>
+
+                        <div class="row mt-3 ">
+                            <div class="col "><input type="button" type="submit" value="Registrar" id="btnRegistrar" class="btn btn-success" style="width: 100%;"></div>
+                            <div class="col"><input type="reset" value="Limpiar" class="btn btn-warning" style="width: 100%;">
+                            </div>
+                        </div>
+
+            </form>
+            <br>
+            <div id="errorRegistro">
+            </div>
+            </div>
+            </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Primer Parcial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- AGREGAR ARCHIVOS JS AQUI -->
+  <script src="./FRONTEND/Manejadora.js"></script>
+</head>
+
+<body style="background-color:darkgrey">
+ <br>
+  <div class="container" style="background-color:lightblue">
+    <br>
+    <h2 style="background-color:gray;color:ghostwhite">Apellido y nombre del alumno</h2>
+
+    <h4>ABM - Ciudad</h4>
+
+      <table class="table table" style="width:95%">
+        <tr>
+          <td style="width:50%">
+            <table class="table table-bordered table-hover" style="background-color:rgb(195, 199, 202)">
+              <tr>
+                <td><label class="col control-label">Id</label></td>
+                <td><input type="text" id="id_ciudad" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Nombre</label></td>
+                <td><input type="text" id="nombre" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Población</label></td>
+                <td><input type="text" id="poblacion" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Pais</label></td>
+                <td><select id="cboPais" style="max-width:190px;min-width:180px" > 
+                    <option>Argentina</option>
+                    <option>Brasil</option>
+                    <option>Uruguay</option>
+                    <option>Colombia</option>
+                    <option>Venezuela</option>
+                  </select>
+                </td>
+              </tr>
+             <tr>
+                <td><label class="col control-label">Foto</label></td>
+                <td><input type="file" id="foto" name="foto" ></td>
+              </tr>
+              <tr>
+                  <td colspan="2" style="text-align:center">
+                      <div style="height:100px"><img id="imgFoto" src="./ciudad_default.jpg" height="100px" width="300px" /></div><!-- PREVISUALIZACION -->
+                  </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="col">
+                  <input type="button" value="Agregar sin foto" id="btn-agregar" class="btn btn-success" onclick="PrimerParcial.Manejadora.AgregarCiudadSinFoto()" />
+                  <input type="button" value="Mostrar Ciudades" class="btn btn-info" onclick="PrimerParcial.Manejadora.MostrarCiudades()" />
+                  <input type="button" value="Verificar y Agregar" class="btn btn-light" onclick="PrimerParcial.Manejadora.AgregarVerificarCiudad()" />
+                  <input type="button" value="Modificar" class="btn btn-dark" onclick="" />
+                  <input type="button" value="Filtrar ciudades" class="btn btn-primary" onclick="" />
+                  <input type="button" value="Mostrar ciudades borradas" class="btn btn-danger" onclick="" />
+                  <input type="button" value="Cargar paises JSON" class="btn btn-warning" onclick="" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:lavenderblush;">
+              <div id="divTabla">
+                tabla aqu&iacute;...
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    <input type="hidden" id="hdnIdModificacion"><!-- PARA MODIFICAR -->
+    <div id="divSpinner" style="display:none;position:absolute"><img id="imgSpinner" src="./BACKEND/gif-load.gif" /></div><!-- PARA EL SPINNER -->
+  </div>
+</body>
+
+</html>
